@@ -117,7 +117,7 @@ extension RMBasePageViewController {
         attributedStringParagraphStyle.alignment = NSTextAlignment.center
 
         let attributedString = NSAttributedString(string: title,
-                                                  attributes: [NSAttributedString.Key.foregroundColor: NSColor.init(red: 128/255.0, green: 152/255.0, blue: 151/255.0, alpha: 1.0),
+                                                  attributes: [NSAttributedString.Key.foregroundColor: NSColor.init(red: 128/255.0, green: 152/255.0, blue: 151/255.0, alpha: 0.95),
                                                                NSAttributedString.Key.paragraphStyle: attributedStringParagraphStyle,NSAttributedString.Key.font:NSFont(name:"Helvetica Neue", size:18.0)!])
         return attributedString
     }
