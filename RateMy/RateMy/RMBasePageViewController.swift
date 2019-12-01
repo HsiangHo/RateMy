@@ -19,7 +19,7 @@ public protocol RMPageProtocol: NSViewController {
                 dislikeButtonTitle: String)
 }
 
-public class RMBasePageViewController: NSViewController {
+class RMBasePageViewController: NSViewController {
     private lazy var btnLike: NSButton = makeButton()
     private lazy var btnDislike: NSButton = makeButton()
     private var ivLike: NSImageView = NSImageView.init()
