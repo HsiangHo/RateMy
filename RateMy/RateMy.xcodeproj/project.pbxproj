@@ -11,6 +11,9 @@
 		98D48D172389193F003DA11F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D48D162389193F003DA11F /* AppDelegate.swift */; };
 		98D48D1923891945003DA11F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D48D1823891945003DA11F /* Assets.xcassets */; };
 		98D48D1C23891945003DA11F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D48D1A23891945003DA11F /* MainMenu.xib */; };
+		98D6A9C123B7248A00D25A37 /* RMRatingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D6A9C023B7248A00D25A37 /* RMRatingWindow.swift */; };
+		98D6A9C323B7248A00D25A37 /* RateMy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D6A9C223B7248A00D25A37 /* RateMy.swift */; };
+		98D6A9C523B7248A00D25A37 /* RMBasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D6A9C423B7248A00D25A37 /* RMBasePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		98D48D1B23891945003DA11F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		98D48D1D23891945003DA11F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D48D1E23891945003DA11F /* RateMyDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RateMyDemo.entitlements; sourceTree = "<group>"; };
+		98D6A9C023B7248A00D25A37 /* RMRatingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRatingWindow.swift; sourceTree = "<group>"; };
+		98D6A9C223B7248A00D25A37 /* RateMy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateMy.swift; sourceTree = "<group>"; };
+		98D6A9C423B7248A00D25A37 /* RMBasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBasePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				98D48D0823891899003DA11F /* RateMy.h */,
+				98D6A9C223B7248A00D25A37 /* RateMy.swift */,
+				98D6A9C023B7248A00D25A37 /* RMRatingWindow.swift */,
+				98D6A9C423B7248A00D25A37 /* RMBasePageViewController.swift */,
 				98D48D0923891899003DA11F /* Info.plist */,
 			);
 			path = RateMy;
@@ -143,6 +152,7 @@
 				TargetAttributes = {
 					98D48D0423891899003DA11F = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					98D48D132389193F003DA11F = {
 						CreatedOnToolsVersion = 11.1;
@@ -192,6 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98D6A9C323B7248A00D25A37 /* RateMy.swift in Sources */,
+				98D6A9C123B7248A00D25A37 /* RMRatingWindow.swift in Sources */,
+				98D6A9C523B7248A00D25A37 /* RMBasePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +352,7 @@
 		98D48D0E23891899003DA11F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Output";
@@ -354,10 +368,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateMy;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -365,6 +380,7 @@
 		98D48D0F23891899003DA11F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Output";
@@ -380,7 +396,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateMy;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
