@@ -17,7 +17,7 @@ public class RMRatingWindow: NSWindow {
 
     init() {
         super.init(contentRect: NSRect(x: 0, y: 0, width: 480, height: 350),
-                   styleMask: [.closable, .fullSizeContentView, .titled],
+                   styleMask: [.fullSizeContentView, .titled],
                    backing: .buffered,
                    defer: true)
         self.title = ""
@@ -57,10 +57,10 @@ extension RMRatingWindow {
             return
         }
         if current == likePageController {
-            self.close()
+            self.orderOut(nil)
             completionHandler?(.like)
         } else if current == dislikePageController {
-            self.close()
+            self.orderOut(nil)
             completionHandler?(.dislike)
         } else {
             self.contentViewController?.transition(from: mainPageController, to: likePageController, options: .slideLeft, completionHandler: {
@@ -74,10 +74,10 @@ extension RMRatingWindow {
             return
         }
         if current == likePageController {
-            self.close()
+            self.orderOut(nil)
             completionHandler?(.none)
         } else if current == dislikePageController {
-            self.close()
+            self.orderOut(nil)
             completionHandler?(.none)
         } else {
             self.contentViewController?.transition(from: mainPageController, to: dislikePageController, options: .slideRight, completionHandler: {
